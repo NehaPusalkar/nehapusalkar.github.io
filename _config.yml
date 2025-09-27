@@ -9,9 +9,9 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Neha G. Pusalkar"
+title                    : "Neha Pusalkar"
 title_separator          : "-"
-name                     : &name "Neha G. Pusalkar"
+name                     : &name "Neha Pusalkar"
 description              : &description "Neha's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://nehapusalkar.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
@@ -24,13 +24,13 @@ repository               : "NehaPusalkar/nehapusalkar.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Neha G. Pusalkar"
+  name             : "Neha Pusalkar"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student, Robotics and A.I."
-  location         : "Corvallis, OR, USA"
+  bio              : "Ph.D. Student, Robotics and A.I."
+  location         : #"Corvallis, OR, USA"
   employer         : "Oregon State University"
   uri              : # URL
-  email            : "pusalkan@oregonstate.edu" 
+  email            : # "pusalkan@oregonstate.edu" 
 
   # Academic websites
   academia         : # URL

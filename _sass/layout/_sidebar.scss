@@ -25,7 +25,8 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(3 of 12);
+    min-width: 400px;
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -36,7 +37,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    max-width: 400px;
     padding-right: 0;
   }
 
@@ -83,19 +84,25 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 100px;
+  width: 350px;
+  min-width: 350px;
   // set width only, for non-square avatars
-  height: 200px;
+  height: auto;
 
   @include breakpoint($large) {
     display: block;
-    width: auto;
+    width: 100%;
+    min-width: 350px;
     height: auto;
   }
 
   img {
-    max-width: 175px;
-    border-radius: 20%;
+    max-width: 350px !important;
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 10%;
 
     @include breakpoint($large) {
       padding: 5px;
@@ -107,15 +114,18 @@
 .author__content {
   display: table-cell;
   vertical-align: top;
-  padding-left: 15px;
+  padding-left: 20px;
   padding-right: 25px;
   line-height: 1;
+  min-width: 200px;
+  text-align: center;
 
   @include breakpoint($large) {
     display: block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 20px;
   }
 }
 
@@ -129,7 +139,79 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: $type-size-5;
+  font-size: 2.5em !important;
+  word-wrap: break-word;
+  line-height: 1.1;
+  margin-left: -60px;
+}
+
+/* Larger font sizes for about page (home page) author profile */
+body.home .sidebar .author__name {
+  font-size: 2.5em !important;
+  word-wrap: break-word;
+  line-height: 1.1;
+  margin-left: -60px;
+}
+
+body.home .author__bio {
+  font-size: 1.2em !important;
+  margin-left: -60px;
+  margin-bottom: 5px;
+}
+
+body.home .author__employer {
+  font-size: 1.2em !important;
+  margin-left: -70px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+/* Horizontal social media buttons for home page */
+.social-icons--horizontal {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  margin-left: -145px !important;
+  position: relative !important;
+  left: -200px !important;
+  width: 1000px !important;
+}
+
+.social-icons--horizontal .social-button {
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+.social-icons--horizontal .social-button a {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1em;
+}
+
+.social-icons--horizontal .social-button a i {
+  font-size: 5.2em !important;
+  line-height: 1 !important;
+}
+
+.social-icons--horizontal .social-button a:hover {
+  background-color: transparent;
+  color: var(--global-text-color);
+  transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .sidebar .author__desktop {
@@ -165,6 +247,7 @@
   z-index: 10;
   position: relative;
   cursor: pointer;
+  overflow: visible !important;
 
   li:last-child {
     a {
@@ -174,6 +257,7 @@
 
   @include breakpoint($large) {
     display: block;
+    overflow: visible !important;
   }
 
   button {
