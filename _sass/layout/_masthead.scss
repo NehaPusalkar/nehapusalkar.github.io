@@ -63,5 +63,13 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+    font-size: $type-size-3 !important;
+  }
+
+  &--active {
+    a {
+      border-bottom: 2px solid var(--global-text-color) !important;
+      font-weight: 700;
+    }
   }
 }
