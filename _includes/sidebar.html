@@ -1,9 +1,11 @@
 {% include base_path %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  {% unless page.url == '/publications/' or page.url == '/cv/' or page.url == '/portfolio/' or page.url == '/teaching/' %}
+  {% unless page.url == '/cv/' or page.url == '/portfolio/' or page.url == '/teaching/' %}
     <div class="sidebar sticky">
-    {% if page.author_profile or layout.author_profile %}
+    {% if page.url == '/publications/' %}
+      <h3>Recent<br>Publications</h3>
+    {% elsif page.author_profile or layout.author_profile %}
       {% if page.url == '/' %}
         {% include author-profile-home.html %}
       {% else %}

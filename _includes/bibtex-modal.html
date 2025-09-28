@@ -1,0 +1,70 @@
+<!-- BibTeX Modal -->
+<div id="bibtex-modal" class="bibtex-modal" style="display: none;">
+  <div class="bibtex-modal-content">
+    <div class="bibtex-modal-header">
+      <h3>BibTeX</h3>
+      <span class="bibtex-close">&times;</span>
+    </div>
+    <div class="bibtex-modal-body">
+      <pre id="bibtex-content"></pre>
+    </div>
+    <div class="bibtex-modal-footer">
+      <button id="copy-bibtex" class="btn btn-primary">Copy</button>
+      <button class="btn btn-secondary bibtex-close">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all BibTeX links
+  const bibtexLinks = document.querySelectorAll('.bibtex-link');
+  
+  bibtexLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Get BibTeX URL from data attribute
+      const bibtexUrl = this.getAttribute('data-bibtex-url');
+      
+      // Fetch BibTeX content
+      fetch(bibtexUrl)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('bibtex-content').textContent = data;
+          document.getElementById('bibtex-modal').style.display = 'block';
+        })
+        .catch(error => {
+          console.error('Error loading BibTeX:', error);
+          // Fallback to opening in new tab
+          window.open(bibtexUrl, '_blank');
+        });
+    });
+  });
+  
+  // Close modal
+  document.querySelectorAll('.bibtex-close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+      document.getElementById('bibtex-modal').style.display = 'none';
+    });
+  });
+  
+  // Copy to clipboard
+  document.getElementById('copy-bibtex').addEventListener('click', function() {
+    const bibtexContent = document.getElementById('bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+      this.textContent = 'Copied!';
+      setTimeout(() => {
+        this.textContent = 'Copy';
+      }, 2000);
+    });
+  });
+  
+  // Close on outside click
+  document.getElementById('bibtex-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.display = 'none';
+    }
+  });
+});
+</script>

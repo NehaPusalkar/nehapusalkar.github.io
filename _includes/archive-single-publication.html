@@ -1,0 +1,35 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="publication-item">
+  <div class="publication-content">
+    <div class="publication-title">
+      {{ title }}
+    </div>
+    
+    <div class="publication-authors">
+      {% if post.citation %}
+        {% assign citation_parts = post.citation | split: '. ' %}
+        {% assign authors = citation_parts[0] %}
+        {{ authors }}.<br><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+      {% endif %}
+    </div>
+    
+    <div class="publication-links">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" class="publication-link">Download Paper</a>
+      {% endif %}
+      {% if post.bibtexurl %}
+        <a href="{{ post.bibtexurl }}" class="publication-link bibtex-link" data-bibtex-url="{{ post.bibtexurl }}">BibTeX</a>
+      {% endif %}
+      {% if post.slidesurl %}
+        <a href="{{ post.slidesurl }}" class="publication-link">Slides</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

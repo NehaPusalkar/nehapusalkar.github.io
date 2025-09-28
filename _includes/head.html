@@ -18,4 +18,9 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
+<!-- Simple publications styling -->
+{% if page.url == '/publications/' %}
+<link rel="stylesheet" href="{{ base_path }}/assets/css/publications-simple.css">
+{% endif %}
+
 <meta http-equiv="cleartype" content="on">
