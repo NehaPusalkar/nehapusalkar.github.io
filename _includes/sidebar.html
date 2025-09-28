@@ -5,6 +5,11 @@
     <div class="sidebar sticky">
     {% if page.url == '/publications/' %}
       <h3>Recent<br>Publications</h3>
+      {% if site.author.googlescholar %}
+        <div class="sidebar-google-scholar">
+          <p>You can find my articles on<br><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
+        </div>
+      {% endif %}
     {% elsif page.author_profile or layout.author_profile %}
       {% if page.url == '/' %}
         {% include author-profile-home.html %}

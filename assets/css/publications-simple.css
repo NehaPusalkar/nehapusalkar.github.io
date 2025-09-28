@@ -1,4 +1,4 @@
-/* Simple Publications Styling - Disha Kamale Style */
+/* Simple Publications Styling */
 
 /* Sidebar header styling */
 .sidebar h3 {
@@ -6,6 +6,48 @@
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 1rem;
+}
+
+/* Sidebar Google Scholar styling */
+.sidebar-google-scholar {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.sidebar-google-scholar p {
+  font-size: 0.58rem !important;
+  line-height: 1.4 !important;
+  color: #555 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  hyphens: auto !important;
+  white-space: normal !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.sidebar-google-scholar a {
+  color: #3498db !important;
+  text-decoration: none !important;
+  word-break: break-word !important;
+  display: inline !important;
+  max-width: 100% !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  box-sizing: border-box !important;
+}
+
+.sidebar-google-scholar a:hover {
+  color: #2980b9;
+  text-decoration: underline;
 }
 
 .publication-item {
