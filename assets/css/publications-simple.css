@@ -99,6 +99,10 @@
   transform: translateY(-1px) !important;
 }
 
+.cite-link {
+  font-size: 0.5rem !important;
+}
+
 /* Simple responsive design */
 @media (max-width: 768px) {
   .publication-title a {
