@@ -19,13 +19,17 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Get all Download Paper links
   const downloadLinks = document.querySelectorAll('a[href$=".pdf"]');
+  console.log('Found PDF links:', downloadLinks.length);
   
-  downloadLinks.forEach(link => {
+  downloadLinks.forEach((link, index) => {
+    console.log(`PDF link ${index}:`, link.href);
     link.addEventListener('click', function(e) {
       e.preventDefault();
+      e.stopPropagation();
       
       // Get the PDF URL from href
       const pdfUrl = this.getAttribute('href');
+      console.log('Opening PDF:', pdfUrl);
       
       // Open PDF in new tab
       window.open(pdfUrl, '_blank');
