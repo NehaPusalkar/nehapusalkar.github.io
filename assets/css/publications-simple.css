@@ -79,24 +79,24 @@
   margin-top: 0.5rem;
 }
 
-.publication-link {
-  display: inline-block;
-  margin-right: 1rem;
-  color: #3498db;
-  text-decoration: underline;
-  font-size: 0.75rem;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 2px 4px;
-  border-radius: 3px;
-  transition: all 0.2s ease;
+.publication-item .publication-link {
+  display: inline-block !important;
+  margin-right: 1rem !important;
+  color: #3498db !important;
+  text-decoration: underline !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  transition: all 0.2s ease !important;
 }
 
-.publication-link:hover {
-  color: #ffffff;
-  background-color: #3498db;
-  text-decoration: none;
-  transform: translateY(-1px);
+.publication-item .publication-link:hover {
+  color: #ffffff !important;
+  background-color: #3498db !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
 }
 
 /* Simple responsive design */
