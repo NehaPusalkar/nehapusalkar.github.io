@@ -17,6 +17,9 @@
         {% assign citation_parts = post.citation | split: '. ' %}
         {% assign authors = citation_parts[0] %}
         {{ authors }}.<br><i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}
+        {% if post.award %}
+          <br><span style="color:red;">{{ post.award }}</span>
+        {% endif %}
       {% endif %}
     </div>
     
