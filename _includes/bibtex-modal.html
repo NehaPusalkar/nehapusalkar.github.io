@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       e.stopPropagation();
       
+      console.log('Cite link clicked!');
+      
       const bibtexUrl = e.target.getAttribute('data-bibtex-url');
       
       if (!bibtexUrl) {
@@ -31,17 +33,22 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
+      console.log('Fetching BibTeX from:', bibtexUrl);
+      
       // Fetch BibTeX content
       fetch(bibtexUrl)
         .then(response => {
+          console.log('Response status:', response.status);
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           return response.text();
         })
         .then(data => {
+          console.log('BibTeX data received:', data);
+          
           // Create a simple modal that will definitely work
-          const existingModal = document.getElementById('bibtex-modal');
+          const existingModal = document.getElementById('simple-bibtex-modal');
           if (existingModal) {
             existingModal.remove();
           }
@@ -61,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
           `;
           
           document.body.appendChild(modal);
+          console.log('Modal created and added to DOM');
           
           // Close on outside click
           modal.addEventListener('click', function(e) {
@@ -71,8 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
           console.error('Error loading BibTeX:', error);
-          // Fallback to opening in new tab
-          window.open(bibtexUrl, '_blank');
+          alert('Error loading BibTeX: ' + error.message);
         });
     }
   });
