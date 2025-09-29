@@ -17,6 +17,21 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Get all Download Paper links
+  const downloadLinks = document.querySelectorAll('.publication-link:not(.bibtex-link)');
+  
+  downloadLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Get the PDF URL from href
+      const pdfUrl = this.getAttribute('href');
+      
+      // Open PDF in new tab
+      window.open(pdfUrl, '_blank');
+    });
+  });
+  
   // Get all BibTeX links
   const bibtexLinks = document.querySelectorAll('.bibtex-link');
   
