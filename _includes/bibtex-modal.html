@@ -18,7 +18,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Get all Download Paper links
-  const downloadLinks = document.querySelectorAll('.publication-link:not(.bibtex-link)');
+  const downloadLinks = document.querySelectorAll('a[href$=".pdf"]');
   
   downloadLinks.forEach(link => {
     link.addEventListener('click', function(e) {
