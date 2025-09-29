@@ -1,15 +1,19 @@
 {% include base_path %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  {% unless page.url == '/cv/' or page.url == '/portfolio/' or page.url == '/teaching/' %}
+  {% unless page.url == '/cv/' or page.url == '/teaching/' %}
     <div class="sidebar sticky">
-    {% if page.url == '/publications/' %}
-      <h3>Recent<br>Publications</h3>
-      {% if site.author.googlescholar %}
-        <div class="sidebar-google-scholar">
-          <p>You can find my articles on<br><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
-        </div>
-      {% endif %}
+           {% if page.url == '/publications/' %}
+             <h3>Recent<br>Publications</h3>
+             {% if site.author.googlescholar %}
+               <div class="sidebar-google-scholar">
+                 <p>You can find my articles on<br><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
+               </div>
+             {% endif %}
+           {% elsif page.url == '/portfolio/' %}
+             <h3>Projects</h3>
+           {% elsif page.url == '/contact/' %}
+             <h3>Contact</h3>
     {% elsif page.author_profile or layout.author_profile %}
       {% if page.url == '/' %}
         {% include author-profile-home.html %}
