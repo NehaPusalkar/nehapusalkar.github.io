@@ -12,7 +12,7 @@ layout: compress
     {% seo %}
   </head>
 
-  <body{% if page.url == '/' %} class="home"{% elsif page.url == '/publications/' %} class="publications"{% endif %}>
+  <body{% if page.url == '/' %} class="home"{% elsif page.url == '/publications/' %} class="publications"{% elsif page.url == '/portfolio/' %} class="portfolio"{% elsif page.url == '/cv/' %} class="cv"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}

@@ -20,11 +20,6 @@ Work experience
 * June 2021 - Present: Graduate Research Assistant
   * 
 
-* Fall 2015: Research Assistant
-  * 
-
-* Summer 2015: Research Assistant
-  * 
   
 Skills
 ======
