@@ -1,13 +1,20 @@
 {% include base_path %}
 
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-  {% unless page.url == '/cv/' or page.url == '/teaching/' %}
+  {% unless page.url == '/teaching/' %}
     <div class="sidebar sticky">
            {% if page.url == '/publications/' %}
              <h3>Recent<br>Publications</h3>
              {% if site.author.googlescholar %}
                <div class="sidebar-google-scholar">
                  <p>You can find my articles on<br><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
+               </div>
+             {% endif %}
+           {% elsif page.url == '/cv/' %}
+             <h3>Resume</h3>
+             {% if site.author.googlescholar %}
+               <div class="sidebar-google-scholar">
+                 <p>Here is my <a href="{{site.author.googlescholar}}">Resume</a>.</p>
                </div>
              {% endif %}
            {% elsif page.url == '/portfolio/' %}
