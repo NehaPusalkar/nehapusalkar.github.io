@@ -17,8 +17,9 @@ Education
 
 Work experience
 ======
-* June 2021 - Present: Graduate Research Assistant
-  * 
+* June 2021 - Present: Graduate Research Assistant, Oregon State University
+  * Developing multi-robot task allocation and planning algorithms.
+  * Supervisor: Dr. Julie A. Adams
 
   
 Skills
