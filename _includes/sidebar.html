@@ -12,11 +12,9 @@
              {% endif %}
            {% elsif page.url == '/cv/' %}
              <h3>Resume</h3>
-             {% if site.author.googlescholar %}
-               <div class="sidebar-google-scholar">
-                 <p>You can find my articles on<br><a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</p>
-               </div>
-             {% endif %}
+             <div class="sidebar-google-scholar">
+               <p>You can find my entire CV<br><a href="/files/cv.pdf">here</a>.</p>
+             </div>
            {% elsif page.url == '/portfolio/' %}
              <h3>Projects</h3>
            {% elsif page.url == '/contact/' %}

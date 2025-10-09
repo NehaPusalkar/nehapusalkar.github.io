@@ -17,10 +17,13 @@ Education
 
 Work experience
 ======
-* June 2021 - Present: Graduate Research Assistant, Oregon State University
-  * Developing multi-robot task allocation and planning algorithms.
+* June 2021 - Present: Graduate Research Assistant, Oregon State University, Corvallis, USA
+  * Developed hedonic game-based coalition formation algorithms for 10,000-robot simulated collectives demonstrating an 88% runtime improvement and a 99% reduction in communication compared to an existing collective coalition formation algorithm.
+  * Developed a Decision Support System and a Unity-based User Interface that provided visualization and interaction capabilities to assist human operators in autonomous underwater grasping.
   * Supervisor: Dr. Julie A. Adams
 
+* January 2024 - March 2024: Student Intern, Honda Research Institute (HRI), Ann Arbor, USA
+  * Developed a double-round auction-based dynamic coalition formation algorithm for multi-robot systems.
   
 Skills
 ======
@@ -52,7 +55,7 @@ Competitions
 * Participant, Soft Material Robot Challenge, ICRA 2017.
 * Represented India at Hurocup, Federation of International Robot-Sport Association (FIRA), Beijing, 2016
 
-Serviced
+Service
 ======
 ### Reviewing
   * AAAI 2026 
