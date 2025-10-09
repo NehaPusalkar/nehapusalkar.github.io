@@ -129,38 +129,40 @@
 }
 .sidebar .author__name {
   font-family: $sans-serif;
-  font-size: 1.8rem;
+  font-size: 28px; // decouple from html base (26px) to avoid oversized rems
   font-weight: normal !important;
   word-wrap: break-word;
-  line-height: 1.1;
-  margin: 0.5rem 0;
+  line-height: 1.2; // add breathing room to avoid perceived overlap
+  margin: 8px 0;
   
   @include breakpoint(max-width $small) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 
 /* Larger font sizes for about page (home page) author profile */
 body.home .sidebar .author__name {
-  font-size: 1.8rem !important;
+  font-size: 28px !important;
   font-weight: normal !important;
   word-wrap: break-word;
-  line-height: 1.1;
-  margin: 0.5rem 0;
+  line-height: 1.2;
+  margin: 8px 0;
   
   @include breakpoint(max-width $small) {
-    font-size: 1.5rem !important;
+    font-size: 24px !important;
   }
 }
 
 body.home .author__bio {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 6px 0;
 }
 
 body.home .author__employer {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 6px 0;
 }
 
 /* Horizontal social media buttons for home page */
@@ -186,18 +188,18 @@ body.home .author__employer {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 36px;
+  height: 36px;
   background-color: transparent;
   border: none;
   color: var(--global-text-color);
   text-decoration: none;
   transition: all 0.3s ease;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 .social-icons--horizontal .social-button a i {
-  font-size: 2.5rem !important;
+  font-size: 28px !important;
   line-height: 1 !important;
 }
 
@@ -235,12 +237,13 @@ body.home .author__employer {
 
 .author__urls-wrapper {
   position: relative;
-  display: table-cell;
-  vertical-align: middle;
+  display: block; // ensure it stacks below bio/employer
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
   font-family: $sans-serif;
   z-index: 10;
-  position: relative;
-  cursor: pointer;
+  cursor: default;
   overflow: visible !important;
 
   li:last-child {
@@ -264,17 +267,17 @@ body.home .author__employer {
 }
 
 .author__urls {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 15px;
-  padding: 10px;
+  display: block; // always visible on home
+  position: relative; // avoid absolute positioning that drifts left
+  right: auto;
+  margin: 10px 0 0 0;
+  padding: 0;
   list-style-type: none;
-  border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
-  z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  z-index: auto;
+  box-shadow: none;
   cursor: default;
 
   @include breakpoint($large) {
@@ -287,39 +290,9 @@ body.home .author__employer {
     box-shadow: none;
   }
 
-  &:before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -11px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: var(--global-border-color) transparent;
-    z-index: 0;
+  &:before { display: none; }
 
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
-
-  &:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: calc(50% - 10px);
-    width: 0;
-    border-style: solid;
-    border-width: 0 10px 10px;
-    border-color: #fff transparent;
-    z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
-  }
+  &:after { display: none; }
 
   li {
     white-space: nowrap;
@@ -340,6 +313,10 @@ body.home .author__employer {
     }
   }
 }
+
+/* Ensure home page keeps icons directly below employer, centered */
+body.home .author__urls-wrapper { display: block; width: 100%; text-align: center; }
+body.home .author__urls { display: block; position: relative; right: auto; margin: 10px 0 0 0; padding: 0; z-index: auto; }
 
 /* Smaller versions for publications page - Methodical scale down */
 .author__avatar--small {
