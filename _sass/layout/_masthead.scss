@@ -33,6 +33,11 @@
     @include breakpoint($x-large) {
       max-width: $x-large;
     }
+    
+    /* Responsive adjustments for smaller screens */
+    @include breakpoint(max-width $medium) {
+      padding: 0.25em 0.25em;
+    }
 
     nav {
       z-index: 10;
