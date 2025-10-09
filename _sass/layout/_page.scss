@@ -72,25 +72,10 @@
     font-size: 1em;
   }
 
-  /* Larger font size for about page (home page) */
+  /* Remove home-specific font-size bump for consistency across windows */
   body.home & {
     p, li, dl {
-      font-size: 1.2em;
-      
-      @include breakpoint(max-width $medium) {
-        font-size: 1em;
-      }
-    }
-    
-    /* Ensure proper responsive behavior for homepage */
-    @include breakpoint(max-width $medium) {
-      padding-left: 0.5em;
-      padding-right: 0.5em;
-    }
-    
-    @include breakpoint(max-width $small) {
-      padding-left: 0.25em;
-      padding-right: 0.25em;
+      font-size: 1em;
     }
   }
 
