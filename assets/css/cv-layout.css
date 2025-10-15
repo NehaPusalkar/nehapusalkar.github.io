@@ -1,0 +1,46 @@
+/* CV layout-specific overrides to normalize sizing and prevent overlaps */
+
+/* Keep base text at a sane size on the CV page regardless of global rem base */
+body.cv-layout .page__content p,
+body.cv-layout .page__content li,
+body.cv-layout .page__content dl {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Navigation sizing on CV page */
+body.cv-layout .masthead__menu-item--lg {
+  font-size: 20px !important;
+}
+body.cv-layout .masthead__menu-item a {
+  font-size: 16px;
+}
+
+/* Page social icons (CV is a page without sidebar) */
+body.cv-layout .page-social-icons {
+  bottom: 24px;
+  right: 16px;
+}
+body.cv-layout .social-icons--page .social-button a {
+  width: 24px;
+  height: 24px;
+}
+body.cv-layout .social-icons--page .social-button a i {
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+/* Ensure icons stay in a single row if space allows, centered if they wrap */
+body.cv-layout .social-icons--page {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+/* Author/contact blocks on CV page (if any rendered) */
+body.cv-layout .author__name { font-size: 22px !important; line-height: 1.2; }
+body.cv-layout .author__bio,
+body.cv-layout .author__employer { font-size: 16px; line-height: 1.5; }
+
+
