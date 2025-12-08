@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Robotics and Artificial Intelligence, Oregon State University, Corvallis, USA, 2026 (expected)
+* Ph.D. in Robotics and Artificial Intelligence, Oregon State University, Corvallis, USA, 2026 (expected)
 * M.S.E in Robotics, University of Michigan, Ann Arbor, USA, 2021
 * B.Tech in Electronics and Communication Engineering, Visvesvaraya National Institute of Technology (VNIT), Nagpur, India, 2018
 
