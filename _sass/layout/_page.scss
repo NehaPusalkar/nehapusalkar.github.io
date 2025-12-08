@@ -47,6 +47,20 @@
   }
 }
 
+/* Direct targeting for about page to ensure font size increase */
+article.about-page .page__content {
+  p:not(.recent-news-list p) {
+    font-size: 1.5em !important;
+    line-height: 1.7;
+  }
+  
+  .recent-news-list,
+  .recent-news-list li {
+    font-size: 1.2em !important;
+    line-height: 1.5;
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
@@ -81,6 +95,32 @@
   body.home & {
     p, li, dl {
       font-size: 1em;
+    }
+  }
+
+  /* Increase font size for about page */
+  .about-page & {
+    /* Only increase font size for paragraphs (main text), not lists */
+    p:not(.recent-news-list p) {
+      font-size: 1.5em !important;
+      line-height: 1.7;
+    }
+    
+    h2 {
+      font-size: 1.8em;
+    }
+    
+    /* Exclude recent news list from font size increase */
+    .recent-news-list,
+    .recent-news-list li {
+      font-size: 1.2em !important;
+      line-height: 1.5;
+    }
+    
+    /* Ensure proper spacing to avoid overlap with sidebar */
+    @include breakpoint($large) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
