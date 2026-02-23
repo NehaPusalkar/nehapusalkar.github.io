@@ -22,7 +22,7 @@ My primary research interests are Multiple Robot Systems, Distributed AI, Game T
 
 {% assign recent = site.posts | sort: "date" | reverse %}
 <ul class="recent-news-list">
-  {% for post in recent limit:5 %}
+  {% for post in recent limit:7 %}
     {% if post.published != false %}
     <li>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
