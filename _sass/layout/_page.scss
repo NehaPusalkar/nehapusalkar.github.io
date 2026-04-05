@@ -62,9 +62,9 @@ article.about-page .page__content {
   }
 }
 
-html[data-theme="dark"] article.about-page .page__content .home-callout {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-  background: color-mix(in srgb, var(--global-link-color) 28%, var(--global-bg-color));
+html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__lead,
+html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
+  color: #f0b4b4;
 }
 
 .page__title {
@@ -123,43 +123,33 @@ html[data-theme="dark"] article.about-page .page__content .home-callout {
       line-height: 1.5;
     }
 
-    /*
-     * Availability callout — use solid link-colored border (not color-mix with
-     * --global-border-color: light theme’s border is ~white, so mixed borders were invisible).
-     */
+    /* Availability line — no panel; slightly larger than bio (1.5em), colored text */
     .home-callout {
-      margin: 2em 0 2.25em !important;
-      padding: 1.35em 1.5em 1.45em;
-      border: 2px solid var(--global-link-color);
-      border-radius: $border-radius;
-      background: color-mix(in srgb, var(--global-link-color) 26%, var(--global-bg-color));
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      margin: 1em 0 1.15em !important;
+      padding: 0;
+      border: 0;
+      background: none;
+      box-shadow: none;
 
       p {
-        margin-bottom: 0.5em;
-        max-width: 42em;
+        margin-bottom: 0.35em;
       }
 
       p:last-child {
         margin-bottom: 0 !important;
       }
 
-      .home-callout__lead {
-        margin-top: 0;
-        font-size: 1.6875rem !important;
-        line-height: 1.45 !important;
-        font-weight: 700;
-        letter-spacing: -0.015em;
-        color: var(--global-link-color-hover);
-      }
-
+      .home-callout__lead,
       .home-callout__sub {
-        margin-bottom: 0;
-        font-size: 1.1875rem !important;
+        font-size: 1.62em !important;
         line-height: 1.55 !important;
         font-weight: 600;
         font-style: normal;
-        color: var(--global-text-color);
+        color: #8b2222;
+      }
+
+      .home-callout__sub {
+        font-weight: 500;
       }
     }
 
