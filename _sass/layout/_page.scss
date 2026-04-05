@@ -116,6 +116,40 @@ article.about-page .page__content {
       font-size: 1.2em !important;
       line-height: 1.5;
     }
+
+    /* Availability callout on home / about */
+    .home-callout {
+      margin: 1.75em 0 2em !important;
+      padding: 1.1em 1.35em;
+      border-left: 4px solid var(--global-link-color);
+      background: color-mix(in srgb, var(--global-border-color) 45%, var(--global-bg-color));
+      border-radius: $border-radius;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+      p {
+        margin-bottom: 0.55em;
+        font-size: 1.5em !important;
+        line-height: 1.55;
+      }
+
+      p:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .home-callout__lead {
+        margin-top: 0;
+        font-weight: 600;
+      }
+
+      .home-callout__sub {
+        margin-bottom: 0;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--global-text-color-light);
+        font-size: 1.28em !important;
+        line-height: 1.5;
+      }
+    }
     
     /* Ensure proper spacing to avoid overlap with sidebar */
     @include breakpoint($large) {

@@ -16,7 +16,10 @@ I graduated with a Masters in Robotics from University of Michigan in May 2021. 
 
 My primary research interests are Multiple Robot Systems, Distributed AI, Game Theory, Planning under Uncertainty.
 
-
+<div class="home-callout">
+  <p class="home-callout__lead">I am open to industry/academic research positions starting January 2027.</p>
+  <p class="home-callout__sub">Feel free to reach out if I might be a good fit for your organization.</p>
+</div>
 
 ## Recent News
 
