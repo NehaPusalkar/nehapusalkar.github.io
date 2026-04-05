@@ -1,0 +1,33 @@
+/*
+ * Home page availability text — loaded after main.css (see head/custom.html).
+ * Plain CSS so it always deploys as-is; no Sass dependency.
+ */
+article.about-page .page__content .home-callout {
+  margin: 1em 0 1.15em !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+article.about-page .page__content .home-callout p {
+  margin-bottom: 0.35em;
+}
+
+article.about-page .page__content .home-callout .home-callout__lead,
+article.about-page .page__content .home-callout .home-callout__sub {
+  font-size: 1.62em !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: #8b2222 !important;
+}
+
+article.about-page .page__content .home-callout .home-callout__sub {
+  font-weight: 500 !important;
+}
+
+html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__lead,
+html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
+  color: #f0b4b4 !important;
+}

@@ -62,11 +62,6 @@ article.about-page .page__content {
   }
 }
 
-html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__lead,
-html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
-  color: #f0b4b4;
-}
-
 .page__title {
   margin-top: 0;
   line-height: 1;
@@ -123,35 +118,7 @@ html[data-theme="dark"] article.about-page .page__content .home-callout .home-ca
       line-height: 1.5;
     }
 
-    /* Availability line — no panel; slightly larger than bio (1.5em), colored text */
-    .home-callout {
-      margin: 1em 0 1.15em !important;
-      padding: 0;
-      border: 0;
-      background: none;
-      box-shadow: none;
-
-      p {
-        margin-bottom: 0.35em;
-      }
-
-      p:last-child {
-        margin-bottom: 0 !important;
-      }
-
-      .home-callout__lead,
-      .home-callout__sub {
-        font-size: 1.62em !important;
-        line-height: 1.55 !important;
-        font-weight: 600;
-        font-style: normal;
-        color: #8b2222;
-      }
-
-      .home-callout__sub {
-        font-weight: 500;
-      }
-    }
+    /* Home availability styling: assets/css/home-callout.css (loaded in head/custom.html) */
 
     /* Ensure proper spacing to avoid overlap with sidebar */
     @include breakpoint($large) {
