@@ -49,7 +49,8 @@
 
 /* Direct targeting for about page to ensure font size increase */
 article.about-page .page__content {
-  p:not(.recent-news-list p) {
+  /* Only main column paragraphs — not .home-callout (see .home-callout below) */
+  > p {
     font-size: 1.5em !important;
     line-height: 1.7;
   }
@@ -59,6 +60,12 @@ article.about-page .page__content {
     font-size: 1.2em !important;
     line-height: 1.5;
   }
+}
+
+html[data-theme="dark"] article.about-page .page__content .home-callout {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  background: color-mix(in srgb, var(--global-link-color) 22%, var(--global-bg-color));
+  border-color: color-mix(in srgb, var(--global-link-color) 70%, var(--global-border-color));
 }
 
 .page__title {
@@ -100,8 +107,8 @@ article.about-page .page__content {
 
   /* Increase font size for about page */
   .about-page & {
-    /* Only increase font size for paragraphs (main text), not lists */
-    p:not(.recent-news-list p) {
+    /* Only top-level bio paragraphs — not the availability callout box */
+    > p {
       font-size: 1.5em !important;
       line-height: 1.7;
     }
@@ -117,19 +124,18 @@ article.about-page .page__content {
       line-height: 1.5;
     }
 
-    /* Availability callout on home / about */
+    /* Availability callout — rem sizes + tint so it reads as a distinct panel */
     .home-callout {
-      margin: 1.75em 0 2em !important;
-      padding: 1.1em 1.35em;
-      border-left: 4px solid var(--global-link-color);
-      background: color-mix(in srgb, var(--global-border-color) 45%, var(--global-bg-color));
+      margin: 2em 0 2.25em !important;
+      padding: 1.35em 1.5em 1.45em;
+      border: 2px solid color-mix(in srgb, var(--global-link-color) 55%, var(--global-border-color));
       border-radius: $border-radius;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      background: color-mix(in srgb, var(--global-link-color) 16%, var(--global-bg-color));
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 
       p {
-        margin-bottom: 0.55em;
-        font-size: 1.5em !important;
-        line-height: 1.55;
+        margin-bottom: 0.5em;
+        max-width: 42em;
       }
 
       p:last-child {
@@ -138,19 +144,23 @@ article.about-page .page__content {
 
       .home-callout__lead {
         margin-top: 0;
-        font-weight: 600;
+        font-size: 1.6875rem !important;
+        line-height: 1.45 !important;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        color: var(--global-text-color);
       }
 
       .home-callout__sub {
         margin-bottom: 0;
-        font-weight: 400;
-        font-style: italic;
-        color: var(--global-text-color-light);
-        font-size: 1.28em !important;
-        line-height: 1.5;
+        font-size: 1.1875rem !important;
+        line-height: 1.55 !important;
+        font-weight: 500;
+        font-style: normal;
+        color: color-mix(in srgb, var(--global-text-color) 88%, var(--global-link-color));
       }
     }
-    
+
     /* Ensure proper spacing to avoid overlap with sidebar */
     @include breakpoint($large) {
       padding-left: 0;
