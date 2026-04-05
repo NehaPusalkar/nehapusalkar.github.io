@@ -14,13 +14,14 @@ article.about-page .page__content .home-callout p {
   margin-bottom: 0.35em;
 }
 
+/* Same blues as publications-simple.css (.publication-title / sidebar Scholar links) */
 article.about-page .page__content .home-callout .home-callout__lead,
 article.about-page .page__content .home-callout .home-callout__sub {
   font-size: 1.62em !important;
   line-height: 1.55 !important;
   font-weight: 600 !important;
   font-style: normal !important;
-  color: #8b2222 !important;
+  color: #3498db !important;
 }
 
 article.about-page .page__content .home-callout .home-callout__sub {
@@ -29,5 +30,5 @@ article.about-page .page__content .home-callout .home-callout__sub {
 
 html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__lead,
 html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
-  color: #f0b4b4 !important;
+  color: #0ea1c5 !important;
 }
