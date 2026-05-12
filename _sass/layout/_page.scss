@@ -47,17 +47,16 @@
   }
 }
 
-/* Direct targeting for about page to ensure font size increase */
+/* About / home main column — match normal site reading size (no oversized body text) */
 article.about-page .page__content {
-  /* Only main column paragraphs — not .home-callout (see .home-callout below) */
   > p {
-    font-size: 1.5em !important;
-    line-height: 1.7;
+    font-size: 1em !important;
+    line-height: 1.65;
   }
-  
+
   .recent-news-list,
   .recent-news-list li {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
     line-height: 1.5;
   }
 }
@@ -99,22 +98,15 @@ article.about-page .page__content {
     }
   }
 
-  /* Increase font size for about page */
   .about-page & {
-    /* Only top-level bio paragraphs — not the availability callout box */
     > p {
-      font-size: 1.5em !important;
-      line-height: 1.7;
+      font-size: 1em !important;
+      line-height: 1.65;
     }
-    
-    h2 {
-      font-size: 1.8em;
-    }
-    
-    /* Exclude recent news list from font size increase */
+
     .recent-news-list,
     .recent-news-list li {
-      font-size: 1.2em !important;
+      font-size: 1em !important;
       line-height: 1.5;
     }
 
