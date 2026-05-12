@@ -36,6 +36,13 @@
     @include suffix(0.5 of 12);
   }
 
+  /* Extra gutter so main text does not crowd the profile column */
+  body.home & {
+    @include breakpoint($large) {
+      @include prefix(0.85 of 12);
+    }
+  }
+
   .page__inner-wrap {
     @include full();
 
@@ -47,16 +54,16 @@
   }
 }
 
-/* About / home main column — match normal site reading size (no oversized body text) */
+/* About / home main column — compact reading size */
 article.about-page .page__content {
   > p {
-    font-size: 1em !important;
-    line-height: 1.65;
+    font-size: 0.9em !important;
+    line-height: 1.6;
   }
 
   .recent-news-list,
   .recent-news-list li {
-    font-size: 1em !important;
+    font-size: 0.9em !important;
     line-height: 1.5;
   }
 }
@@ -100,13 +107,13 @@ article.about-page .page__content {
 
   .about-page & {
     > p {
-      font-size: 1em !important;
-      line-height: 1.65;
+      font-size: 0.9em !important;
+      line-height: 1.6;
     }
 
     .recent-news-list,
     .recent-news-list li {
-      font-size: 1em !important;
+      font-size: 0.9em !important;
       line-height: 1.5;
     }
 

@@ -142,27 +142,61 @@
 
 /* Larger font sizes for about page (home page) author profile */
 body.home .sidebar .author__name {
-  font-size: 28px !important;
+  font-size: 22px !important;
   font-weight: normal !important;
   word-wrap: break-word;
-  line-height: 1.2;
+  line-height: 1.25;
   margin: 8px 0;
-  
+
   @include breakpoint(max-width $small) {
-    font-size: 24px !important;
+    font-size: 20px !important;
   }
 }
 
 body.home .author__bio {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
   margin: 6px 0;
 }
 
 body.home .author__employer {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
   margin: 6px 0;
+}
+
+/* Home: gutter from main text, drop 400px min-width, left-align profile stack */
+@include breakpoint($large) {
+  body.home .sidebar {
+    min-width: 0 !important;
+    max-width: 280px;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+
+  body.home .sidebar .author__avatar {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 220px;
+    text-align: left;
+  }
+
+  body.home .sidebar .author__avatar img {
+    max-width: 220px;
+    height: 220px;
+  }
+
+  body.home .sidebar .author__content {
+    text-align: left;
+  }
+
+  body.home .sidebar .author__urls-wrapper {
+    text-align: left;
+  }
+
+  body.home .social-icons--horizontal {
+    justify-content: flex-start;
+  }
 }
 
 /* Horizontal social media buttons for home page */
@@ -199,7 +233,7 @@ body.home .author__employer {
 }
 
 .social-icons--horizontal .social-button a i {
-  font-size: 28px !important;
+  font-size: 22px !important;
   line-height: 1 !important;
 }
 
@@ -314,8 +348,16 @@ body.home .author__employer {
   }
 }
 
-/* Ensure home page keeps icons directly below employer, centered */
-body.home .author__urls-wrapper { display: block; width: 100%; text-align: center; }
+/* Home: URLs under profile — centered on small screens, left-aligned on desktop */
+body.home .author__urls-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint($large) {
+    text-align: left;
+  }
+}
 body.home .author__urls { display: block; position: relative; right: auto; margin: 10px 0 0 0; padding: 0; z-index: auto; }
 
 /* Smaller versions for publications page - Methodical scale down */

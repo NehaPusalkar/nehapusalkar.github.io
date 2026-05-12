@@ -17,8 +17,8 @@ article.about-page .page__content .home-callout p {
 /* Same blues as publications-simple.css (.publication-title / sidebar Scholar links) */
 article.about-page .page__content .home-callout .home-callout__lead,
 article.about-page .page__content .home-callout .home-callout__sub {
-  font-size: 1.08em !important;
-  line-height: 1.55 !important;
+  font-size: 0.95em !important;
+  line-height: 1.5 !important;
   font-weight: 600 !important;
   font-style: normal !important;
   color: #3498db !important;
