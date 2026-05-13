@@ -54,7 +54,7 @@
   }
 }
 
-/* About / home main column — compact reading size */
+/* About / home main column — single place for typography + large-screen padding */
 article.about-page .page__content {
   > p {
     font-size: 0.9em !important;
@@ -65,6 +65,13 @@ article.about-page .page__content {
   .recent-news-list li {
     font-size: 0.9em !important;
     line-height: 1.5;
+  }
+
+  /* Availability callout: assets/css/home-callout.css (included from head/custom.html) */
+
+  @include breakpoint($large) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -102,27 +109,6 @@ article.about-page .page__content {
   body.home & {
     p, li, dl {
       font-size: 1em;
-    }
-  }
-
-  .about-page & {
-    > p {
-      font-size: 0.9em !important;
-      line-height: 1.6;
-    }
-
-    .recent-news-list,
-    .recent-news-list li {
-      font-size: 0.9em !important;
-      line-height: 1.5;
-    }
-
-    /* Home availability styling: assets/css/home-callout.css (loaded in head/custom.html) */
-
-    /* Ensure proper spacing to avoid overlap with sidebar */
-    @include breakpoint($large) {
-      padding-left: 0;
-      padding-right: 0;
     }
   }
 

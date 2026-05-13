@@ -153,12 +153,7 @@ body.home .sidebar .author__name {
   }
 }
 
-body.home .author__bio {
-  font-size: 14px;
-  line-height: 1.45;
-  margin: 6px 0;
-}
-
+body.home .author__bio,
 body.home .author__employer {
   font-size: 14px;
   line-height: 1.45;
@@ -179,11 +174,11 @@ body.home .author__employer {
     margin-right: auto;
     max-width: 220px;
     text-align: left;
-  }
 
-  body.home .sidebar .author__avatar img {
-    max-width: 220px;
-    height: 220px;
+    img {
+      max-width: 220px;
+      height: 220px;
+    }
   }
 
   body.home .sidebar .author__content {
