@@ -108,7 +108,7 @@ article.about-page .page__content {
   /* Remove home-specific font-size bump for consistency across windows */
   body.home & {
     p, li, dl {
-      font-size: 0.7em;
+      font-size: 0.45em;
     }
   }
 
