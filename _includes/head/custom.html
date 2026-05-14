@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
 {% if page.url == '/' %}
-<link rel="stylesheet" href="{{ base_path }}/assets/css/home-callout.css?v=7"/>
+<link rel="stylesheet" href="{{ base_path }}/assets/css/home-callout.css?v={{ site.asset_css_version | default: 1 }}"/>
 {% endif %}
 
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
