@@ -54,17 +54,18 @@
   }
 }
 
-/* About / home main column — single place for typography + large-screen padding */
+/* About / home main column — matches .contact-info in publications-simple.css (~18px) */
 article.about-page .page__content {
-  > p {
-    font-size: 0.9em !important;
-    line-height: 1.6;
-  }
-
+  > p,
   .recent-news-list,
   .recent-news-list li {
-    font-size: 0.9em !important;
-    line-height: 1.5;
+    font-size: 1.125rem !important;
+    line-height: 1.8;
+  }
+
+  > h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.35;
   }
 
   /* Availability callout: assets/css/home-callout.css (included from head/custom.html) */
@@ -103,13 +104,6 @@ article.about-page .page__content {
 
   p, li, dl {
     font-size: 1em;
-  }
-
-  /* Remove home-specific font-size bump for consistency across windows */
-  body.home & {
-    p, li, dl {
-      font-size: 0.45em;
-    }
   }
 
   /* paragraph indents */

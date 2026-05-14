@@ -44,14 +44,14 @@ html[data-theme="dark"] .projects-coming-soon h2 {
   color: #ffffff !important;
 }
 
-/* Contact page styling */
+/* Contact page styling — 1.125rem matches home about + CV body (16px html root) */
 .contact-info {
-  font-size: 0.7rem!important;
+  font-size: 1.125rem !important;
   line-height: 1.8;
 }
 
 .contact-symbol {
-  font-size: 1.2rem!important;
+  font-size: 1.875rem !important;
   margin-right: 0.3rem;
   vertical-align: middle;
   display: inline-block;
@@ -60,7 +60,20 @@ html[data-theme="dark"] .projects-coming-soon h2 {
 }
 
 .contact-info + hr + p {
-  font-size: 0.6rem!important;
+  font-size: 1rem !important;
+}
+
+/* CV page (archive layout): main prose matches contact / home about */
+body.cv .archive > p,
+body.cv .archive li,
+body.cv .archive dd {
+  font-size: 1.125rem !important;
+  line-height: 1.8 !important;
+}
+
+body.cv .archive > h2 {
+  font-size: 1.25rem !important;
+  line-height: 1.35 !important;
 }
 
 /* Reduce spacing above Journal Articles title only */

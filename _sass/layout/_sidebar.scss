@@ -140,27 +140,29 @@
   }
 }
 
-/* Larger font sizes for about page (home page) author profile */
+/* Larger font sizes for about page (home page) author profile — centered with avatar */
 body.home .sidebar .author__name {
-  font-size: 22px !important;
+  font-size: 1.5rem !important;
   font-weight: normal !important;
   word-wrap: break-word;
   line-height: 1.25;
   margin: 8px 0;
+  text-align: center;
 
   @include breakpoint(max-width $small) {
-    font-size: 20px !important;
+    font-size: 1.25rem !important;
   }
 }
 
 body.home .author__bio,
 body.home .author__employer {
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 1.0625rem;
+  line-height: 1.5;
   margin: 6px 0;
+  text-align: center;
 }
 
-/* Home: gutter from main text, drop 400px min-width, left-align profile stack */
+/* Home: gutter from main text, drop 400px min-width; profile stack centered under photo */
 @include breakpoint($large) {
   body.home .sidebar {
     min-width: 0 !important;
@@ -170,10 +172,10 @@ body.home .author__employer {
   }
 
   body.home .sidebar .author__avatar {
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
     max-width: 220px;
-    text-align: left;
+    text-align: center;
 
     img {
       max-width: 220px;
@@ -182,15 +184,15 @@ body.home .author__employer {
   }
 
   body.home .sidebar .author__content {
-    text-align: left;
+    text-align: center;
   }
 
   body.home .sidebar .author__urls-wrapper {
-    text-align: left;
+    text-align: center;
   }
 
   body.home .social-icons--horizontal {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
@@ -229,6 +231,17 @@ body.home .author__employer {
 
 .social-icons--horizontal .social-button a i {
   font-size: 22px !important;
+  line-height: 1 !important;
+}
+
+body.home .social-icons--horizontal .social-button a {
+  width: 48px;
+  height: 48px;
+  font-size: 1.25rem;
+}
+
+body.home .social-icons--horizontal .social-button a i {
+  font-size: 1.5rem !important;
   line-height: 1 !important;
 }
 

@@ -4,8 +4,8 @@
 body.cv-layout .page__content p,
 body.cv-layout .page__content li,
 body.cv-layout .page__content dl {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 
 /* Navigation sizing on CV page */
