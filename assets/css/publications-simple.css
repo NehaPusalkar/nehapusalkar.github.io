@@ -97,7 +97,7 @@ body.publications .archive h2:first-of-type {
 
 /* Sidebar Google Scholar text styling - reduced font size of text below titles */
 .sidebar-google-scholar p {
-  font-size: 0.65rem !important; /* Further reduced from 0.7rem */
+  font-size: 0.9rem !important; /* Further reduced from 0.7rem */
   line-height: 1.4 !important;
   color: #555 !important;
   margin: 0 !important;
@@ -113,7 +113,7 @@ body.publications .archive h2:first-of-type {
 }
 
 .sidebar-google-scholar a {
-  font-size: 0.65rem !important; /* Further reduced from 0.7rem */
+  font-size: 0.9rem !important; /* Further reduced from 0.7rem */
   color: #3498db !important;
   text-decoration: none !important;
   word-break: break-word !important;
@@ -182,8 +182,8 @@ html[data-theme="dark"] .sidebar-google-scholar a:hover {
   margin-bottom: 0.5rem;
   color: #3498db;
   font-weight: 600;
-  font-size: 0.65rem;
-  line-height: 1.3;
+  font-size: 1.125rem !important;
+  line-height: 1.8;
 }
 
 /* Dark mode support for publication titles */
@@ -198,7 +198,8 @@ html[data-theme="dark"] .publication-authors {
 .publication-authors {
   margin-bottom: 0.3rem;
   color: #555;
-  font-size: 0.55rem;
+  font-size: 1.125rem !important;
+  line-height: 1.8;
 }
 
 
@@ -211,7 +212,7 @@ html[data-theme="dark"] .publication-authors {
   margin-right: 1rem !important;
   color: #3498db !important;
   text-decoration: underline !important;
-  font-size: 0.75rem !important;
+  font-size: 1.125rem !important;
   font-weight: 600 !important;
   cursor: pointer !important;
   padding: 2px 4px !important;
@@ -237,7 +238,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 }
 
 .publication-item .publication-link.cite-link {
-  font-size: 0.55rem !important;
+  font-size: 1.125rem !important;
   pointer-events: auto !important;
   cursor: pointer                                !important;
   position: relative !important;
@@ -247,7 +248,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 /* Simple responsive design */
 @media (max-width: 768px) {
   .publication-title a {
-    font-size: 1rem;
+    font-size: 1.125rem !important;
   }
   
   .publication-links {

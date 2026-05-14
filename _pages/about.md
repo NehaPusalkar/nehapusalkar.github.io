@@ -10,9 +10,9 @@ redirect_from:
 
 
 
-I am a Ph.D. Candidate in Robotics and AI, advised by Dr. Julie A. Adams at Oregon State University. 
+I am a Ph.D. Candidate in Robotics and AI, advised by [Dr. Julie A. Adams](https://engineering.oregonstate.edu/people/julie-adams) at Oregon State University. 
 
-I graduated with a Masters in Robotics from the University of Michigan, Ann Arbor in May 2021. At UM, I worked at the Laboratory for Progress directed by Dr. Chad Jenkins, and at the UM Ford Center for Autonomous Vehicles. I completed my Bachelors in Electronics and Communication Engineering from VNIT Nagpur, India in May 2018.
+I graduated with a Masters in Robotics from the University of Michigan, Ann Arbor in May 2021. At UM, I worked at the Laboratory for Progress directed by [Dr. Chad Jenkins](https://robotics.umich.edu/people/faculty/chad-jenkins/), and at the UM Ford Center for Autonomous Vehicles. I completed my Bachelors in Electronics and Communication Engineering from VNIT Nagpur, India in May 2018.
 
 My primary research interests are Multiple Robot Systems, Distributed AI, Game Theory, Planning under Uncertainty.
 

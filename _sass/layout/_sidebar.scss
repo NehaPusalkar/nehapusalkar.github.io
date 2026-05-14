@@ -63,6 +63,16 @@
   }
 }
 
+/* Home: push the avatar (and everything below it) directly via margin-top on the avatar element itself.
+ * This avoids quirks with position:fixed + padding-top so the offset is unambiguous and visible at all widths. */
+body.home .sidebar .author__avatar {
+  margin-top: calc(#{$home-extra-below-masthead}) !important;
+
+  @include breakpoint(max-width $small) {
+    margin-top: $home-extra-below-masthead-small !important;
+  }
+}
+
 .sidebar__right {
   margin-bottom: 1em;
 
@@ -166,20 +176,20 @@ body.home .author__employer {
 @include breakpoint($large) {
   body.home .sidebar {
     min-width: 0 !important;
-    max-width: 280px;
+    max-width: 350px;
     padding-right: 2rem;
     box-sizing: border-box;
   }
 
   body.home .sidebar .author__avatar {
     margin-left: auto;
-    margin-right: auto;
-    max-width: 220px;
+    margin-right: 2em;
+    max-width: 350px;
     text-align: center;
 
     img {
-      max-width: 220px;
-      height: 220px;
+      max-width: 350px;
+      height: 350px;
     }
   }
 
@@ -234,14 +244,22 @@ body.home .author__employer {
   line-height: 1 !important;
 }
 
+/* Home page social icons — match the bottom-right .social-icons--page style on publications/CV.
+ * Single row (nowrap), 26x26 hit area, glyph font-size 2em, 20px gap. */
+body.home .social-icons--horizontal {
+  flex-wrap: nowrap !important;
+  gap: 20px;
+  justify-content: center;
+}
+
 body.home .social-icons--horizontal .social-button a {
-  width: 48px;
-  height: 48px;
-  font-size: 1.25rem;
+  width: 36px;
+  height: 36px;
+  font-size: 1em;
 }
 
 body.home .social-icons--horizontal .social-button a i {
-  font-size: 1.5rem !important;
+  font-size: 3em !important;
   line-height: 1 !important;
 }
 

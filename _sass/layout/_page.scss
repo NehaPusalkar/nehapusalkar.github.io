@@ -5,7 +5,7 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 3em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -27,6 +27,15 @@
     margin-top: 1em;
   }
 
+}
+
+/* Home: extra air below masthead for main column (fixed sidebar uses same offset in _sidebar.scss) */
+body.home #main {
+  margin-top: calc(2em + #{$home-extra-below-masthead});
+
+  @include breakpoint(max-width $small) {
+    margin-top: calc(1em + #{$home-extra-below-masthead-small});
+  }
 }
 
 .page {

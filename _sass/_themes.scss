@@ -74,6 +74,13 @@ $susy: (
     global-box-sizing: border-box,
 );
 
+/* Homepage (/) only: extra space below masthead.
+ * One knob — drives the gap below the nav bar for both the about column
+ * (#main) and the fixed sidebar (photo + name + icons), so they stay aligned.
+ * Tweak this number to move both blocks up or down together. */
+$home-extra-below-masthead       : 4rem !default;
+$home-extra-below-masthead-small : 3rem !default;
+
 /* ==========================================================================
    BRAND COLORS
    ========================================================================== */
