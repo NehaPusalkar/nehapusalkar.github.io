@@ -5,7 +5,9 @@
 .page__footer {
   @include clearfix;
   background-color: var(--global-footer-bg-color);
-  color: var(--global-text-color-light);
+  /* Falls back to --global-text-color-light for themes that don't define
+     --global-footer-text-color (e.g. the "air" theme). */
+  color: var(--global-footer-text-color, var(--global-text-color-light));
 
   float: left;
   margin-left: 0;
@@ -53,7 +55,7 @@
   .fab,
   .far,
   .fal {
-    color: var(--global-text-color-light);
+    color: var(--global-footer-text-color, var(--global-text-color-light));
   }
 }
 

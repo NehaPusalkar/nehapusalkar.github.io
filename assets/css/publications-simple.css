@@ -1,5 +1,27 @@
 /* Simple Publications Styling */
 
+/* -------------------------------------------------------------------------- */
+/* THEME NOTE: Accent colors below use OSU Burnt Orange (a toned-down variant */
+/* of Beaver Orange) to match the site theme                                  */
+/* (see _sass/theme/_default_light.scss).                                     */
+/*                                                                            */
+/* Current active hexes:                                                      */
+/*   #b23a0a   (light-mode accent, burnt orange)                              */
+/*   #852b08   (light-mode accent hover, ~25% darker burnt)                   */
+/*   #e86a34   (dark-mode accent, softer burnt for contrast on black)         */
+/*                                                                            */
+/* Previous (brighter Beaver Orange) values used before toning down:          */
+/*   #dc4405   (light-mode accent)                                            */
+/*   #a53303   (light-mode accent hover)                                      */
+/*   #ff7a3d   (dark-mode accent)                                             */
+/*                                                                            */
+/* Original blue accents (pre-orange theme) — to revert to the pure-white     */
+/* blue theme, find/replace back to these:                                    */
+/*   #b23a0a  -> #3498db   (light-mode accent)                                */
+/*   #852b08  -> #2980b9   (light-mode accent hover)                          */
+/*   #e86a34  -> #0ea1c5   (dark-mode accent)                                 */
+/* -------------------------------------------------------------------------- */
+
 /* Publications page styling */
 body.publications .sidebar h3 {
   font-size: 1.4rem !important; /* Keep original size */
@@ -114,7 +136,7 @@ body.publications .archive h2:first-of-type {
 
 .sidebar-google-scholar a {
   font-size: 0.9rem !important; /* Further reduced from 0.7rem */
-  color: #3498db !important;
+  color: #b23a0a !important;
   text-decoration: none !important;
   word-break: break-word !important;
   display: inline !important;
@@ -152,7 +174,7 @@ html[data-theme="dark"] body.cv .sidebar h3 {
 }
 
 .sidebar-google-scholar a:hover {
-  color: #2980b9;
+  color: #852b08;
   text-decoration: underline;
 }
 
@@ -162,7 +184,7 @@ html[data-theme="dark"] .sidebar-google-scholar p {
 }
 
 html[data-theme="dark"] .sidebar-google-scholar a {
-  color: #0ea1c5 !important;
+  color: #e86a34 !important;
 }
 
 html[data-theme="dark"] .sidebar-google-scholar a:hover {
@@ -180,7 +202,7 @@ html[data-theme="dark"] .sidebar-google-scholar a:hover {
 
 .publication-title {
   margin-bottom: 0.5rem;
-  color: #3498db;
+  color: #b23a0a;
   font-weight: 600;
   font-size: 1.125rem !important;
   line-height: 1.8;
@@ -188,7 +210,7 @@ html[data-theme="dark"] .sidebar-google-scholar a:hover {
 
 /* Dark mode support for publication titles */
 html[data-theme="dark"] .publication-title {
-  color: #0ea1c5 !important; /* Use the dark theme link color with !important */
+  color: #e86a34 !important; /* Use the dark theme link color with !important */
 }
 
 html[data-theme="dark"] .publication-authors {
@@ -210,7 +232,7 @@ html[data-theme="dark"] .publication-authors {
 .publication-item .publication-link {
   display: inline-block !important;
   margin-right: 1rem !important;
-  color: #3498db !important;
+  color: #b23a0a !important;
   text-decoration: underline !important;
   font-size: 1.125rem !important;
   font-weight: 600 !important;
@@ -222,19 +244,19 @@ html[data-theme="dark"] .publication-authors {
 
 .publication-item .publication-link:hover {
   color: #ffffff !important;
-  background-color: #3498db !important;
+  background-color: #b23a0a !important;
   text-decoration: none !important;
   transform: translateY(-1px) !important;
 }
 
 /* Dark mode support for publication links */
 html[data-theme="dark"] .publication-item .publication-link {
-  color: #0ea1c5 !important;
+  color: #e86a34 !important;
 }
 
 html[data-theme="dark"] .publication-item .publication-link:hover {
   color: #ffffff !important;
-  background-color: #0ea1c5 !important;
+  background-color: #e86a34 !important;
 }
 
 .publication-item .publication-link.cite-link {
@@ -339,7 +361,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 }
 
 .bibtex-copy-btn {
-  background-color: #3498db;
+  background-color: #b23a0a;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -350,7 +372,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 }
 
 .bibtex-copy-btn:hover {
-  background-color: #2980b9;
+  background-color: #852b08;
 }
 
 .bibtex-copy-btn.copied {
@@ -388,11 +410,11 @@ html[data-theme="dark"] .bibtex-close:focus {
 }
 
 html[data-theme="dark"] .bibtex-copy-btn {
-  background-color: #3498db;
+  background-color: #b23a0a;
 }
 
 html[data-theme="dark"] .bibtex-copy-btn:hover {
-  background-color: #2980b9;
+  background-color: #852b08;
 }
 
 html[data-theme="dark"] .bibtex-copy-btn.copied {

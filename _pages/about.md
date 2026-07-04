@@ -28,7 +28,7 @@ My primary research interests are Multiple Robot Systems, Distributed AI, Game T
   {% for post in recent limit:7 %}
     {% if post.published != false %}
     <li>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B, %Y" }}</time>: {{ post.title }}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time>: {{ post.title }}
     </li>
     {% endif %}
   {% endfor %}

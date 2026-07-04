@@ -14,14 +14,21 @@ article.about-page .page__content .home-callout p {
   margin-bottom: 0.35em;
 }
 
-/* Same blues as publications-simple.css (.publication-title / sidebar Scholar links) */
+/* -------------------------------------------------------------------------- */
+/* BACKUP: Previous callout colors (blue). To revert to the pure-white theme, */
+/* swap the active `color:` values with the ones in the comment.              */
+/*   Light: color: #3498db                                                    */
+/*   Dark:  color: #0ea1c5                                                    */
+/* -------------------------------------------------------------------------- */
+
+/* ACTIVE: OSU Crisp (B5) — Burnt Orange to match global link accent (toned-down Beaver Orange) */
 article.about-page .page__content .home-callout .home-callout__lead,
 article.about-page .page__content .home-callout .home-callout__sub {
   font-size: 1.125rem !important;
   line-height: 1.8 !important;
   font-weight: 600 !important;
   font-style: normal !important;
-  color: #3498db !important;
+  color: #b23a0a !important;
 }
 
 article.about-page .page__content .home-callout .home-callout__sub {
@@ -30,5 +37,5 @@ article.about-page .page__content .home-callout .home-callout__sub {
 
 html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__lead,
 html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
-  color: #0ea1c5 !important;
+  color: #e86a34 !important;
 }

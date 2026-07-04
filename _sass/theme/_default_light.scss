@@ -27,6 +27,11 @@ $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
+/* -------------------------------------------------------------------------- */
+/* BACKUP: Previous pure-white theme. To revert, comment out the active block */
+/* below and uncomment this one.                                              */
+/* -------------------------------------------------------------------------- */
+/*
 :root {
     --global-base-color                 : #{$gray};
     --global-bg-color                   : #fff;
@@ -38,9 +43,37 @@ $sidebar-screen-min-width   : 1024px;
     --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
     --global-link-color                 : #52adc8;
     --global-link-color-hover           : mix(#000, #2f7f93, 25%);
-    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);  
+    --global-link-color-visited         : mix(#fff, #2f7f93, 25%);
     --global-masthead-link-color        : #{$dark-gray};
-    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);    
+    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);
+    --global-text-color                 : #{$dark-gray};
+    --global-text-color-light           : #{$light-gray};
+    --global-thead-color                : #{$lighter-gray};
+}
+*/
+
+/* ACTIVE: OSU Crisp (B5) — near-white cream + Burnt Orange accent (toned-down Beaver Orange) */
+:root {
+    --global-base-color                 : #{$gray};
+    --global-bg-color                   : #fdfbf7;
+    /* Footer strip: subtle warm cream, a hair darker than --global-bg-color for
+       a soft separator. (Old peach #fce4d4 read as a saturated colored band on
+       a full-width footer — it was chosen for a callout in the mock, not here.) */
+    --global-footer-bg-color            : #f4ede1;
+    /* Warm muted brown-gray for the footer copyright text (used only via
+       var(--global-footer-text-color) in _footer.scss with a fallback). */
+    --global-footer-text-color          : #7a6f60;
+    --global-border-color               : #{$lighter-gray};
+    /* Warmed footer top-border to harmonize with the cream footer strip. */
+    --global-dark-border-color          : #e0d5c3;
+    --global-code-background-color      : #f8f2ea;
+    --global-code-text-color            : #{$darker-gray};
+    --global-fig-caption-color          : mix(#fff,  #{$dark-gray}, 25%);
+    --global-link-color                 : #b23a0a;
+    --global-link-color-hover           : #{mix(#000, #b23a0a, 25%)};
+    --global-link-color-visited         : #{mix(#fff, #b23a0a, 25%)};
+    --global-masthead-link-color        : #{$dark-gray};
+    --global-masthead-link-color-hover  : mix(#000, #{$gray}, 25%);
     --global-text-color                 : #{$dark-gray};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};

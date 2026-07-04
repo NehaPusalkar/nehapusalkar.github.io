@@ -8,11 +8,21 @@ $dark-gray                  : mix(#000, $gray, 40%);
 $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 
-$background                 : #474747;
+/* -------------------------------------------------------------------------- */
+/* BACKUP: Previous dark themes. To revert to an earlier look, swap $background */
+/* (and $link) with one of the values below.                                    */
+/*                                                                              */
+/*   Original template default:    $background: #474747;  $link: #0ea1c5;       */
+/*   OSU Paddletail Black (first): $background: #1e1e1e;  $link: #ff7a3d;       */
+/* -------------------------------------------------------------------------- */
+
+/* ACTIVE: OSU Crisp (B5) — Neutral Charcoal (D3) + toned-down Burnt Orange   */
+/* (softer than pure Paddletail Black; harmonizes with the light-mode cream)  */
+$background                 : #2b2b2b;
 $background-light           : mix(#fff, $background, 80%);
 $background-lighter         : mix(#fff, $background, 90%);
 $text                       : #ffffff;
-$link                       : #0ea1c5;
+$link                       : #e86a34;
 $link-dark                  : mix(#000, $link, 25%);
 $link-light                 : mix(#fff, $link, 25%);
 
@@ -50,5 +60,7 @@ html[data-theme="dark"] {
     --global-masthead-link-color-hover  : #{$background-light};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #f3f3f3;
+    /* Footer copyright text in dark mode — same as --global-text-color-light. */
+    --global-footer-text-color          : #f3f3f3;
     --global-thead-color                : #{$background-lighter};
 }
