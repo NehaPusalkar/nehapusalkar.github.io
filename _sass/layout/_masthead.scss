@@ -6,7 +6,11 @@
   position: fixed;
   background: var(--global-bg-color);
   height: fit-content;
-  top: 0.5em;
+  /* Flush with viewport top so scrolling content is fully covered by the
+     opaque bar — previously `top: 0.5em` left an 8px transparent strip
+     through which text scrolling upward was visible. Vertical breathing
+     room is now provided by .masthead__inner-wrap's top padding. */
+  top: 0;
   width: 100%;
   border-bottom: 0;
   box-shadow: none;
@@ -26,16 +30,18 @@
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 0.2em 0.4em;
+    /* Extra top padding (0.7em) replaces the 0.5em gap we removed above so
+       the nav bar keeps its previous visual height. */
+    padding: 0.7em 0.4em 0.2em;
     font-family: $sans-serif-narrow;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
     }
-    
+
     /* Responsive adjustments for smaller screens */
     @include breakpoint(max-width $medium) {
-      padding: 0.25em 0.25em;
+      padding: 0.75em 0.25em 0.25em;
     }
 
     nav {
