@@ -208,6 +208,42 @@ html[data-theme="dark"] .sidebar-google-scholar a:hover {
   line-height: 1.8;
 }
 
+/* Inline "(Cite)" after the publication title — smaller and lighter than the
+   title so it reads as a parenthetical, while the "Cite" word itself keeps
+   the burnt-orange accent as a link. */
+.publication-title__cite-wrap {
+  color: #6b6b6b;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-left: 0.25em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.publication-title__cite {
+  color: #b23a0a !important;
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.publication-title__cite:hover {
+  color: #852b08 !important;
+  text-decoration: none;
+}
+
+html[data-theme="dark"] .publication-title__cite-wrap {
+  color: #b8b3a9;
+}
+
+html[data-theme="dark"] .publication-title__cite {
+  color: #e86a34 !important;
+}
+
+html[data-theme="dark"] .publication-title__cite:hover {
+  color: #d05a2e !important;
+}
+
 /* Dark mode support for publication titles */
 html[data-theme="dark"] .publication-title {
   color: #e86a34 !important; /* Use the dark theme link color with !important */

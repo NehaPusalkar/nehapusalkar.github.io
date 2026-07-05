@@ -9,7 +9,7 @@
 <div class="publication-item">
   <div class="publication-content">
     <div class="publication-title">
-      {{ title }}
+      {{ title }}{% if post.bibtexurl %} <span class="publication-title__cite-wrap">(<a href="{{ post.bibtexurl }}" class="publication-title__cite bibtex-link cite-link" data-bibtex-url="{{ post.bibtexurl }}">Cite</a>)</span>{% endif %}
     </div>
     
     <div class="publication-authors">
@@ -31,9 +31,6 @@
     <div class="publication-links">
       {% if post.paperurl %}
         <a href="{{ post.paperurl }}" class="publication-link">Download Paper</a>
-      {% endif %}
-      {% if post.bibtexurl %}
-        <a href="{{ post.bibtexurl }}" class="publication-link bibtex-link cite-link" data-bibtex-url="{{ post.bibtexurl }}">Cite</a>
       {% endif %}
       {% if post.slidesurl %}
         <a href="{{ post.slidesurl }}" class="publication-link">Slides</a>
