@@ -71,22 +71,4 @@ Competitions
 * Participant, Soft Material Robot Challenge, ICRA 2017.
 * Represented India at Hurocup, Federation of International Robot-Sport Association (FIRA), Beijing, 2016
 
-Service
-======
-### Reviewing
-  * AAAI 2026 
-  * ICAPS 2025
-  * IROS 2025
-  * CASE 2023
 
-### Leadership
-  * Co-President, Artificial Intelligence Graduate Student Association (AIGSA), 2024-2025
-
-### Mentoring: 
-  * AI Application Support Program Mentor : Guiding students applying to graduate programs at OSU - 2024, 2025
-  * Project Mentor: Mentored a high school student developing an image-detection framework to identify humans in natural disasters, 2022
-  * Graduate Student Mentor for University of Michigan Robotics graduate and undergraduate students.
-
-### Volunteering:
-  * Heartland Humane Shelter, Corvallis: Helping furbabies find their forever homes! (2025-present)
-  * ICRA 2017, Singapore: Registration desk, Session organization, Lab tour guide.

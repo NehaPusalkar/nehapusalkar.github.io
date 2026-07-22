@@ -19,6 +19,14 @@
              <h3>Projects</h3>
            {% elsif page.url == '/contact/' %}
              <h3>Contact</h3>
+           {% elsif page.url == '/experience/' %}
+             <h3>Experience</h3>
+           {% elsif page.url == '/research/' %}
+             <h3>Research</h3>
+           {% elsif page.url == '/service/' %}
+             <h3>Service</h3>
+           {% elsif page.url == '/awards/' %}
+             <h3>Awards</h3>
     {% elsif page.author_profile or layout.author_profile %}
       {% if page.url == '/' %}
         {% include author-profile-home.html %}
