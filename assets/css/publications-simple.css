@@ -66,9 +66,9 @@ html[data-theme="dark"] .projects-coming-soon h2 {
   color: #ffffff !important;
 }
 
-/* Contact page styling — 1.125rem matches home about + CV body (16px html root) */
+/* Contact page styling — 1.1rem matches home about + CV body (16px html root) */
 .contact-info {
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   line-height: 1.8;
 }
 
@@ -89,7 +89,7 @@ html[data-theme="dark"] .projects-coming-soon h2 {
 body.cv .archive > p,
 body.cv .archive li,
 body.cv .archive dd {
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   line-height: 1.8 !important;
 }
 
@@ -217,7 +217,7 @@ html[data-theme="dark"] .sidebar-google-scholar a:hover {
   margin-bottom: 0.5rem;
   color: #b23a0a;
   font-weight: 600;
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   line-height: 1.8;
 }
 
@@ -269,7 +269,7 @@ html[data-theme="dark"] .publication-authors {
 .publication-authors {
   margin-bottom: 0.3rem;
   color: #555;
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   line-height: 1.8;
 }
 
@@ -314,7 +314,7 @@ html[data-theme="dark"] .publication-award__icon {
   margin-right: 1rem !important;
   color: #b23a0a !important;
   text-decoration: underline !important;
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   font-weight: 600 !important;
   cursor: pointer !important;
   padding: 2px 4px !important;
@@ -340,7 +340,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 }
 
 .publication-item .publication-link.cite-link {
-  font-size: 1.125rem !important;
+  font-size: 1.1rem !important;
   pointer-events: auto !important;
   cursor: pointer                                !important;
   position: relative !important;
@@ -350,7 +350,7 @@ html[data-theme="dark"] .publication-item .publication-link:hover {
 /* Simple responsive design */
 @media (max-width: 768px) {
   .publication-title a {
-    font-size: 1.125rem !important;
+    font-size: 1.1rem !important;
   }
   
   .publication-links {

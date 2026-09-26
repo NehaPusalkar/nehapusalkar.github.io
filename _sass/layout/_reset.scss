@@ -11,6 +11,12 @@ html {
   /* 16px root: keeps nav, footer, and rem-based type in normal proportion */
   font-size: 16px;
 
+  /* Always reserve the scrollbar gutter. Without this, a short page (e.g.
+     Awards) has no scrollbar while a long one (Publications) does, and the
+     centered container jumps ~7px sideways when moving between them. */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+
   @include breakpoint($medium) {
     font-size: 16px;
   }

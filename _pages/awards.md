@@ -32,7 +32,7 @@ author_profile: false
 
   <section class="exp-sec">
     <div class="exp-label">
-      <h2>Grants and Scholarships</h2>
+      <h2>Grants and<br>Scholarships</h2>
       <span class="exp-rule"></span>
     </div>
     <ul class="exp-items">

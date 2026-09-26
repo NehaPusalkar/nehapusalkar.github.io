@@ -2,32 +2,44 @@
 layout: archive
 title: ""
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<div class="exp">
+
+  {% if site.author.googlescholar %}
+  <p class="exp-intro">You can find my articles on <a href="{{ site.author.googlescholar }}">my Google Scholar profile</a>.</p>
+  {% endif %}
+
+  <!-- New style rendering if publication categories are defined -->
+  {% if site.publication_category %}
+    {% for category in site.publication_category %}
+      {% assign cat_posts = site.publications | where: "category", category[0] %}
+      {% if cat_posts.size > 0 %}
+        <section class="exp-sec">
+          <div class="exp-label">
+            <h2>{{ category[1].title | replace: " ", "<br>" }}</h2>
+            <span class="exp-rule"></span>
+          </div>
+          <div class="exp-pubs">
+            {% for post in cat_posts reversed %}
+              {% include archive-single-publication.html %}
+            {% endfor %}
+          </div>
+        </section>
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-        {% include archive-single-publication.html %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
+  {% else %}
+    <div class="exp-pubs">
+      {% for post in site.publications reversed %}
         {% include archive-single-publication.html %}
-  {% endfor %}
-{% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+</div>
 
 {% include bibtex-modal.html %}
-

@@ -39,3 +39,13 @@ html[data-theme="dark"] article.about-page .page__content .home-callout .home-ca
 html[data-theme="dark"] article.about-page .page__content .home-callout .home-callout__sub {
   color: #e86a34 !important;
 }
+
+/* The theme turns <u> into a faint low-sitting border (see _reset.scss:
+   `u,ins{text-decoration:none;border-bottom:1px solid ...}`). Restore a real
+   underline so emphasised labels actually read as underlined. */
+article.about-page .page__content u {
+  border-bottom: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}

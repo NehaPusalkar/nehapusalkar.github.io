@@ -10,11 +10,16 @@ redirect_from:
 
 
 
-I am a Ph.D. Candidate in Robotics and AI, advised by [Dr. Julie A. Adams](https://engineering.oregonstate.edu/people/julie-adams) at Oregon State University. 
+I am a Ph.D. Candidate in Robotics and AI, advised by [Dr. Julie A. Adams](https://engineering.oregonstate.edu/people/julie-adams) at Oregon State University. My dissertation develops scalable coaltition formation algoritms for heterogeneous multi-robot collectives of up to 10,000 robots. I utilize game-theoretic and sequential decision-making techniques to design distributed coordination frameworks for dynamic and uncertain environments. I envision developing hybrid AI systems integrating foundation model reasoning with game-theoretic coordination guarantees for long-duration autonomy.
 
 I graduated with a Masters in Robotics from the University of Michigan, Ann Arbor in May 2021. At UM, I worked at the Laboratory for Progress directed by [Dr. Chad Jenkins](https://robotics.umich.edu/people/faculty/chad-jenkins/), and at the UM Ford Center for Autonomous Vehicles. I completed my Bachelors in Electronics and Communication Engineering from VNIT Nagpur, India in May 2018.
 
-My primary research interests are Multiple Robot Systems, Distributed AI, Game Theory, Planning under Uncertainty.
+<u>Research Interests</u>:
+
+* Multi-Robot Systems and Large Scale Collectives: Task Allocation and Planning
+* Multi-Objective Optimization
+* Game Theory
+* Reinforcement Learning
 
 <div class="home-callout">
   <p class="home-callout__lead">I am open to industry/academic research positions starting January 2027.</p>
