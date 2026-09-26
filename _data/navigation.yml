@@ -17,10 +17,11 @@ main:
   #   url: /portfolio/
 
   - title: "CV"
-    url: /cv/
+    url: /files/cv.pdf
+    new_tab: true
 
-  # - title: "Experience"
-  #   url: /experience/
+  - title: "Experience"
+    url: /experience/
 
   # - title: "Research"
   #   url: /research/

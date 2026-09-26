@@ -117,6 +117,19 @@ body.publications .archive h2:first-of-type {
   margin-bottom: 1rem;
 }
 
+/* Burnt-orange rule under the simple sidebar headings (Recent Publications,
+   Contact, Projects), matching the section rails on Experience / Service /
+   Awards. Direct child only, so the author profile's name (also an h3, but
+   nested) is left alone. */
+.sidebar > h3::after {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--global-link-color);
+}
+
 /* Sidebar Google Scholar text styling - reduced font size of text below titles */
 .sidebar-google-scholar p {
   font-size: 0.9rem !important; /* Further reduced from 0.7rem */

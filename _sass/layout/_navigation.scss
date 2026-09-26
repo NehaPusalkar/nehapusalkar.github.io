@@ -203,20 +203,18 @@
   }
 
   .visible-links {
+    /* Table layout shrink-wraps to the links' actual content width, which is
+       what the greedy-nav script measures to decide when items should
+       collapse into the dropdown. Right-align that shrink-wrapped block
+       within the (now full-width, name-free) nav via auto margin instead of
+       stretching the list itself, so the width measurement stays accurate. */
     display: table;
+    margin-left: auto;
+    margin-right: 0;
 
     li {
       display: table-cell;
       vertical-align: middle;
-
-      &:first-child {
-        font-weight: bold;
-        text-wrap: wrap;
-
-        a {
-          margin-left: 0;
-        }
-      }
 
       &:last-child {
         a {

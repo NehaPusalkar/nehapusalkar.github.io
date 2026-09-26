@@ -9,7 +9,7 @@ body.cv-layout .page__content dl {
 }
 
 /* Navigation sizing on CV page */
-body.cv-layout .masthead__menu-item--lg {
+body.cv-layout .site-title {
   font-size: 20px !important;
 }
 body.cv-layout .masthead__menu-item a {
