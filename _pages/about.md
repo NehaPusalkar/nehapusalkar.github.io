@@ -22,7 +22,7 @@ I graduated with a Masters in Robotics from the University of Michigan, Ann Arbo
 * Reinforcement Learning
 
 <div class="home-callout">
-  <p class="home-callout__lead">I am open to industry/academic research positions starting January 2027.</p>
+  <p class="home-callout__lead">I am open to industry/academic research positions starting January 2027 <span class="home-callout__ref">(<a href="/files/resume.pdf" target="_blank" rel="noopener">Resume</a>)</span>.</p>
   <p class="home-callout__sub">Feel free to reach out if I might be a good fit for your organization.</p>
 </div>
 

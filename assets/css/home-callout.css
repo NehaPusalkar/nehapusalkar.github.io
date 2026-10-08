@@ -49,3 +49,23 @@ article.about-page .page__content u {
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
 }
+
+/* The callout line is already burnt orange; the link inside it inherits that
+   accent and reads far too hot. Use the theme's body text color and mark it
+   as a link with an underline instead. */
+article.about-page .page__content .home-callout a {
+  color: var(--global-text-color) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+
+article.about-page .page__content .home-callout a:hover {
+  text-decoration-thickness: 2.5px;
+}
+
+/* Parentheses around the link take the same neutral colour as the link text,
+   so only the sentence itself stays burnt orange. */
+article.about-page .page__content .home-callout .home-callout__ref {
+  color: var(--global-text-color);
+}
